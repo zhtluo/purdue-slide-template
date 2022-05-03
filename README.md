@@ -8,7 +8,7 @@ Currently pending Overleaf moderation.
 
 ## Preview
 
-A preview will be published in the release section.
+Preview: [here](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.0/A_Purdue_LaTeX_Slide_Template.pdf).
 
 ## Legal
 
