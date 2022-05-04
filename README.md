@@ -1,14 +1,14 @@
 # A LaTeX Slide Template for Purdue University
 
-A LaTeX slide template inspired by [Purdue CS Brand Guide](https://www.cs.purdue.edu/media/brand_guide.html).
+A LaTeX beamer slide template inspired by [Purdue CS Brand Guide](https://www.cs.purdue.edu/media/brand_guide.html).
 
 ## Overleaf
 
-Currently pending Overleaf moderation.
+You can use it on Overleaf [here](https://www.overleaf.com/latex/templates/a-purdue-latex-slide-template/zxfwvccrcmks).
 
 ## Preview
 
-Preview: [here](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.0/A_Purdue_LaTeX_Slide_Template.pdf).
+[Click here](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.0/A_Purdue_LaTeX_Slide_Template.pdf).
 
 ## Legal
 
