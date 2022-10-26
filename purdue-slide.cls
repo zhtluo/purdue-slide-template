@@ -11,9 +11,10 @@
 
 % Font: https://tug.org/FontCatalogue/texgyreheros/
 % TODO: Maybe find a better font sometime later.
-\RequirePackage{tgheros}
-\renewcommand*\familydefault{\sfdefault}
 \RequirePackage[T1]{fontenc}
+\RequirePackage{tgheros}
+\RequirePackage{fix-cm}
+\renewcommand*\familydefault{\sfdefault}
 
 % Color
 \definecolor{purdue-gold}{RGB}{207, 185, 145}
@@ -59,8 +60,9 @@
     \hspace*{.12\paperwidth}
     \includesvg[width=.3\paperwidth,keepaspectratio]{\slidelogo}
     \makebox[.3\paperwidth][c]{\slidefoot}
-    \hspace*{.025\paperwidth}
-    \insertdate\hspace{.03\paperwidth}\insertframenumber
+    \makebox[.12\paperwidth][c]{\insertdate}
+    \hspace{.01\paperwidth}
+    \makebox[.02\paperwidth][c]{\insertframenumber}
     \vspace*{.06\paperheight}
 }
 
@@ -92,9 +94,9 @@
 \setbeamercolor*{title}{fg=purdue-gold}
 \setbeamerfont*{title}{size={\fontsize{30}{36}}, series=\fontseries{bc}, shape=\fontshape{it}}
 \setbeamercolor*{subtitle}{fg=white}
-\setbeamerfont*{subtitle}{size={\fontsize{11}{14}}, series=\fontseries{b}, shape=\fontshape{it}}
+\setbeamerfont*{subtitle}{size={\fontsize{11}{14}}, series=\fontseries{bm}, shape=\fontshape{it}}
 \setbeamercolor*{author}{fg=white}
-\setbeamerfont*{author}{size={\fontsize{11}{14}}, series=\fontseries{b}, shape=\fontshape{}}
+\setbeamerfont*{author}{size={\fontsize{11}{14}}, series=\fontseries{bm}, shape=\fontshape{n}}
 \defbeamertemplate*{title page}{customized}[1][]
 {
     \usebeamerfont{title}\usebeamercolor[fg]{title}
@@ -127,8 +129,9 @@
             \hspace*{.12\paperwidth}
             \includesvg[width=.3\paperwidth,keepaspectratio]{\titlelogo}
             \makebox[.3\paperwidth][c]{\slidefoot}
-            \hspace*{.025\paperwidth}
-            \insertdate\hspace{.03\paperwidth}\insertframenumber
+            \makebox[.12\paperwidth][c]{\insertdate}
+            \hspace{.01\paperwidth}
+            \makebox[.02\paperwidth][c]{\insertframenumber}
             \vspace*{.06\paperheight}
         }
         \setbeamertemplate{frametitle}{\vspace*{.25\paperheight}
