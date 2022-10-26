@@ -4,11 +4,13 @@ A LaTeX beamer slide template inspired by [Purdue CS Brand Guide](https://www.cs
 
 ## Overleaf
 
-You can use it on Overleaf [here](https://www.overleaf.com/latex/templates/a-purdue-latex-slide-template/zxfwvccrcmks).
+~~You can use it on Overleaf [here](https://www.overleaf.com/latex/templates/a-purdue-latex-slide-template/zxfwvccrcmks).~~
+
+Overleaf appears to be bugged for SVG files in TeX 2022 (with Inkscape version 1.1). It is recommended to either use TeX 2021 on Overleaf or to compile locally (with Inkscape version < 1.0).
 
 ## Preview
 
-[Click here](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.0/A_Purdue_LaTeX_Slide_Template.pdf).
+[Click here](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.1/main.pdf).
 
 ## Legal
 
