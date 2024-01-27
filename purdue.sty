@@ -1,0 +1,51 @@
+% Font: https://tug.org/FontCatalogue/texgyreheros/
+% TODO: Maybe find a better font sometime later.
+\RequirePackage[OT1]{fontenc}
+\usepackage{unicode-math}
+\setromanfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}[FontFace = {bc}{it}{TeX Gyre Heros Cn/BI}]
+\setmonofont{TeX Gyre Cursor}[Ligatures=NoCommon]
+\setmathfont{TeX Gyre Termes Math}
+
+% Color
+\definecolor{purdue-gold}{RGB}{207, 185, 145}
+\definecolor{purdue-dust}{RGB}{235, 217, 159}
+\definecolor{purdue-field}{RGB}{221, 185, 69}
+\definecolor{purdue-rush}{RGB}{218, 170, 0}
+\definecolor{purdue-aged}{RGB}{142, 111, 62}
+\definecolor{purdue-steam}{RGB}{196, 191, 192}
+\definecolor{purdue-railway-gray}{RGB}{157, 151, 149}
+\definecolor{purdue-cool-gray}{RGB}{111, 114, 123}
+\definecolor{purdue-steel}{RGB}{85, 89, 96}
+
+% Customize enumerate/itemize style
+\setbeamerfont*{enumerate item}{series=\bfseries}
+\setbeamerfont*{enumerate subitem}{series=\bfseries}
+\setbeamerfont*{enumerate subsubitem}{series=\bfseries}
+\setbeamercolor*{enumerate item}{fg=black}
+\setbeamercolor*{enumerate subitem}{fg=black}
+\setbeamercolor*{enumerate subsubitem}{fg=black}
+
+\setbeamercolor*{itemize item}{fg=black}
+\setbeamercolor*{itemize subitem}{fg=black}
+\setbeamercolor*{itemize subsubitem}{fg=black}
+\setbeamertemplate{itemize items}[square]
+
+% Customize block style:
+\setbeamercolor{block body}{bg=purdue-dust}
+\setbeamercolor{block title}{bg=purdue-aged, fg=white}
+\setbeamercolor{block body example}{bg=purdue-steam}
+\setbeamercolor{block title example}{bg=purdue-steel, fg=white}
+\setbeamercolor{block body alerted}{bg=alerted text.fg!10}
+\setbeamercolor{block title alerted}{bg=alerted text.fg!20}
+
+% Customize figure tyle:
+\setbeamercolor{caption name}{fg=purdue-steel}
+
+% Customize title page style
+\setbeamercolor*{title}{fg=purdue-gold}
+\setbeamerfont*{title}{size={\fontsize{30}{36}}, series=\fontseries{bc}, shape=\fontshape{it}}
+\setbeamercolor*{subtitle}{fg=white}
+\setbeamerfont*{subtitle}{size={\fontsize{11}{14}}, series=\fontseries{bm}, shape=\fontshape{it}}
+\setbeamercolor*{author}{fg=white}
+\setbeamerfont*{author}{size={\fontsize{11}{14}}, series=\fontseries{bm}, shape=\fontshape{n}}

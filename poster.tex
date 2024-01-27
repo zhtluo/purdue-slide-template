@@ -1,0 +1,134 @@
+\documentclass{purdue-poster}
+
+\usepackage[orientation=portrait, width=32, height=40, scale=1.5]{beamerposter}
+
+% For filler text:
+\usepackage[base]{babel}
+\usepackage{lipsum}
+
+\title{\VERYHuge{A Purdue \LaTeX\ Poster Template}}
+\author{\Large{A Purdue Student\texorpdfstring{\textsuperscript{1}}{}, A Duepur Student\texorpdfstring{\textsuperscript{2}}{}}}
+\institute
+{Purdue University\texorpdfstring{\textsuperscript{1}}{}, Duepur University\texorpdfstring{\textsuperscript{2}},\\
+Accepted for Overleaf Template}
+\date{\today}
+
+\renewcommand{\titlelogo}{
+    % You can put multiple logos here.
+    \includesvg[width=.1\paperwidth,keepaspectratio]{logo/cs-v-rev.svg}
+    \vskip50pt
+    \includesvg[width=.1\paperwidth,keepaspectratio]{logo/pu-v-rev.svg}
+}
+
+\begin{document}
+\begin{frame}{}
+    \begin{columns}[c]
+    \begin{column}{.45\linewidth}
+    \begin{block}{\large Long Text}
+        Nobody actually reads a very long paragraph in a poster.
+
+        \bigskip
+
+        \lipsum[2]
+
+        \lipsum[2]
+    \end{block}
+
+    \begin{block}{Itemize List}
+        Some introduction of the list.
+        \begin{itemize}
+            \item Bulleted copy. Keep it short with bite-size chunks of information.
+            \begin{itemize}
+                \item Bulleted copy. Keep it short with bite-size chunks of information.
+            \end{itemize}
+            \item Bulleted copy. Keep it short with bite-size chunks of information.
+            \item Bulleted copy. Keep it short with bite-size chunks of information.
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Enumerate List}
+        Some introduction of the list.
+        \begin{enumerate}
+            \item Bulleted copy. Keep it short with bite-size chunks of information.
+            \begin{enumerate}
+                \item Bulleted copy. Keep it short with bite-size chunks of information.
+            \end{enumerate}
+            \item Bulleted copy. Keep it short with bite-size chunks of information.
+            \item Bulleted copy. Keep it short with bite-size chunks of information.
+        \end{enumerate}
+    \end{block}
+
+    \begin{block}{Maths}
+        An example of some very long equations with $\Psi (x,t)$:
+        
+        \begin{align}
+        i\hbar {\frac {\partial }{\partial t}}\Psi (x,t)&=\left[-{\frac {\hbar ^{2}}{2m}}{\frac {\partial ^{2}}{\partial x^{2}}}+V(x,t)\right]\Psi (x,t) \\
+        i\hbar {\frac {d}{dt}}\vert \Psi (t)\rangle &={\hat {H}}\vert \Psi (t)\rangle \\ 
+        |\Psi (t)\rangle &=\sum _{n}A_{n}e^{{-iE_{n}t}/\hbar }|\psi _{E_{n}}\rangle
+        \end{align}
+        
+        Indeed an example of some very long equations with $\Psi (x,t)$.
+    \end{block}
+    
+    \end{column}
+
+    \begin{column}{.45\linewidth}
+    
+    \begin{block}{Figure}
+        \LaTeX\ can draw figures with the tikz package:
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}[
+        square/.style={rectangle, draw=black!, very thick, minimum size=5mm},
+        ]
+        \node[square](client){\footnotesize Client};
+        \node[square](r1)[right=of client]{\footnotesize Relay 1};
+        \node[square](r2)[right=of r1]{\footnotesize Relay 2};
+        \node[square](r3)[right=of r2]{\footnotesize Relay 3};
+        \node[square](server)[right=of r3]{\footnotesize Server};
+        \draw[->](client.east)--node[above=1em]{\footnotesize$E_1(E_2(E_3(P)))$}(r1.west);
+        \draw[->](r1.east)--node[above=1em]{\footnotesize$E_2(E_3(P))$}(r2.west);
+        \draw[->](r2.east)--node[above=1em]{\footnotesize$E_3(P)$}(r3.west);
+        \draw[->](r3.east)--node[above=1em]{\footnotesize$P$}(server);
+        \end{tikzpicture}
+        \caption{An Example of a Three-Hop Connection}
+        \label{fig:three-hop}
+        \end{figure}
+    \end{block}
+
+    \begin{exampleblock}{Block with Another Color}
+    A gray block with two different colors.
+    
+    \bigskip
+    
+    \lipsum[2]
+    \end{exampleblock}
+
+    \begin{alertblock}{Alert Block}
+    A red block for alert, in default theme from \LaTeX.
+
+    \bigskip
+    
+    \lipsum[2]
+    \end{alertblock}
+
+    \begin{block}{Thank you for using!}
+        For issues on the template, please visit the Github page:
+        
+        {\small\texttt{https://github.com/zhtluo/purdue-slide-template}\par}
+    \end{block}
+
+    \begin{block}{\large QR Code}
+        Put a QR code here to give the reader something to scan.
+
+        You can find the SVG QR generator under \texttt{qr.py}.
+
+        \begin{figure}
+            {\centering\includesvg[width=.5\linewidth]{qrcode.svg}}
+        \end{figure}
+    \end{block}
+    \end{column}
+    \end{columns}
+    \vfill
+\end{frame}
+\end{document}

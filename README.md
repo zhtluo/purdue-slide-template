@@ -1,6 +1,6 @@
-# A LaTeX Slide Template for Purdue University
+# A LaTeX Slide and Poster Template for Purdue University
 
-A LaTeX beamer slide template inspired by [Purdue CS Brand Guide](https://www.cs.purdue.edu/media/brand_guide.html).
+A LaTeX beamer slide and poster template inspired by [Purdue CS Brand Guide](https://www.cs.purdue.edu/media/brand_guide.html).
 
 ## Overleaf
 
