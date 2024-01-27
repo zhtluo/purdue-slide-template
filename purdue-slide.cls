@@ -3,29 +3,14 @@
 
 % For 4:3 slides: \LoadClass{beamer}
 \LoadClass[aspectratio=169]{beamer}
+
 \RequirePackage{calc}
 \RequirePackage{environ}
 \RequirePackage{svg}
 \RequirePackage{tikz}
 \usetikzlibrary{positioning}
 
-% Font: https://tug.org/FontCatalogue/texgyreheros/
-% TODO: Maybe find a better font sometime later.
-\RequirePackage[T1]{fontenc}
-\RequirePackage{tgheros}
-\RequirePackage{fix-cm}
-\renewcommand*\familydefault{\sfdefault}
-
-% Color
-\definecolor{purdue-gold}{RGB}{207, 185, 145}
-\definecolor{purdue-dust}{RGB}{235, 217, 159}
-\definecolor{purdue-field}{RGB}{221, 185, 69}
-\definecolor{purdue-rush}{RGB}{218, 170, 0}
-\definecolor{purdue-aged}{RGB}{142, 111, 62}
-\definecolor{purdue-steam}{RGB}{196, 191, 192}
-\definecolor{purdue-railway-gray}{RGB}{157, 151, 149}
-\definecolor{purdue-cool-gray}{RGB}{111, 114, 123}
-\definecolor{purdue-steel}{RGB}{85, 89, 96}
+\RequirePackage{purdue}
 
 % Disable navigation symbols 
 \setbeamertemplate{navigation symbols}{}
@@ -58,7 +43,7 @@
 \setbeamertemplate{footline}
 {
     \hspace*{.12\paperwidth}
-    \includesvg[width=.3\paperwidth,keepaspectratio]{\slidelogo}
+    \makebox[.3\paperwidth][c]{\slidelogo}
     \makebox[.3\paperwidth][c]{\slidefoot}
     \makebox[.12\paperwidth][c]{\insertdate}
     \hspace{.01\paperwidth}
@@ -66,37 +51,7 @@
     \vspace*{.06\paperheight}
 }
 
-% Customize enumerate/itemize style
-\setbeamerfont*{enumerate item}{series=\bfseries}
-\setbeamerfont*{enumerate subitem}{series=\bfseries}
-\setbeamerfont*{enumerate subsubitem}{series=\bfseries}
-\setbeamercolor*{enumerate item}{fg=black}
-\setbeamercolor*{enumerate subitem}{fg=black}
-\setbeamercolor*{enumerate subsubitem}{fg=black}
-
-\setbeamercolor*{itemize item}{fg=black}
-\setbeamercolor*{itemize subitem}{fg=black}
-\setbeamercolor*{itemize subsubitem}{fg=black}
-\setbeamertemplate{itemize items}[square]
-
-% Customize block style:
-\setbeamercolor{block body}{bg=purdue-dust}
-\setbeamercolor{block title}{bg=purdue-aged, fg=white}
-\setbeamercolor{block body example}{bg=purdue-steam}
-\setbeamercolor{block title example}{bg=purdue-steel, fg=white}
-\setbeamercolor{block body alerted}{bg=alerted text.fg!10}
-\setbeamercolor{block title alerted}{bg=alerted text.fg!20}
-
-% Customize figure tyle:
-\setbeamercolor{caption name}{fg=purdue-aged}
-
 % Customize title page style
-\setbeamercolor*{title}{fg=purdue-gold}
-\setbeamerfont*{title}{size={\fontsize{30}{36}}, series=\fontseries{bc}, shape=\fontshape{it}}
-\setbeamercolor*{subtitle}{fg=white}
-\setbeamerfont*{subtitle}{size={\fontsize{11}{14}}, series=\fontseries{bm}, shape=\fontshape{it}}
-\setbeamercolor*{author}{fg=white}
-\setbeamerfont*{author}{size={\fontsize{11}{14}}, series=\fontseries{bm}, shape=\fontshape{n}}
 \defbeamertemplate*{title page}{customized}[1][]
 {
     \usebeamerfont{title}\usebeamercolor[fg]{title}
@@ -127,7 +82,7 @@
         \setbeamercolor{footline}{fg=white}
         \setbeamertemplate{footline}{
             \hspace*{.12\paperwidth}
-            \includesvg[width=.3\paperwidth,keepaspectratio]{\titlelogo}
+            \makebox[.3\paperwidth][c]{\titlelogo}
             \makebox[.3\paperwidth][c]{\slidefoot}
             \makebox[.12\paperwidth][c]{\insertdate}
             \hspace{.01\paperwidth}
