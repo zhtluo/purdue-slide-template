@@ -8,7 +8,9 @@ You can use it on Overleaf [here](https://www.overleaf.com/latex/templates/a-pur
 
 ## Preview
 
-[Click here](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.1/main.pdf).
+[Click here for the slide](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.2/slide.pdf).
+
+[Click here for the poster](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.2/poster.pdf).
 
 ## Legal
 
