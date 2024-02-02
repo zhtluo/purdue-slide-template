@@ -4,7 +4,9 @@ A LaTeX beamer slide and poster template inspired by [Purdue CS Brand Guide](htt
 
 ## Overleaf
 
-You can use it on Overleaf [here](https://www.overleaf.com/latex/templates/a-purdue-latex-slide-template/zxfwvccrcmks).
+[Click here for the slide](https://www.overleaf.com/latex/templates/a-purdue-latex-slide-template/zxfwvccrcmks).
+
+[Click here for the poster](https://www.overleaf.com/latex/templates/a-purdue-latex-poster-template/mcykrgdfjxbd).
 
 ## Preview
 
