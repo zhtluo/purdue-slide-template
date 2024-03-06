@@ -22,6 +22,7 @@
 \setbeamertemplate{background canvas}{
     \begin{tikzpicture}[remember picture,overlay,shift=(current page.north west)]
     \begin{scope}[x={(current page.north east)},y={(current page.south west)}]
+        \clip (0,0) rectangle (1,1);
         \fill[purdue-railway-gray] (0,0) rectangle (1,1);
         \draw[purdue-cool-gray,line width=60pt] (1,0) -- (1,1) -- (0,1) -- (0,0);
     \end{scope}

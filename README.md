@@ -14,6 +14,14 @@ A LaTeX beamer slide and poster template inspired by [Purdue CS Brand Guide](htt
 
 [Click here for the poster](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.2/poster.pdf).
 
+## SVG
+
+Generate SVG file with
+
+```bash
+lualatex --shell-escape poster.tex && dvilualatex --shell-escape poster.tex && dvisvgm --no-font poster.dvi
+```
+
 ## Legal
 
 ### Purdue Logo
