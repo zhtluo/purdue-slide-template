@@ -1,16 +1,17 @@
-\documentclass{purdue-poster}
+\documentclass[20pt]{purdue-poster}
 
-\usepackage[size=custom, width=80, height=100, scale=1.4]{beamerposter}
+% Paper size
+\geometry{papersize={32in, 40in}}
 
 % For filler text:
 \usepackage[base]{babel}
 \usepackage{lipsum}
 
-\title{\VERYHuge{A Purdue \LaTeX\ Poster Template}}
-\author{\Large{A Purdue Student\texorpdfstring{\textsuperscript{1}}{}, A Duepur Student\texorpdfstring{\textsuperscript{2}}{}}}
+\title{\Huge{A Purdue \LaTeX\ Poster Template}}
+\author{\large{A Purdue Student\texorpdfstring{\textsuperscript{1}}{}, A Duepur Student\texorpdfstring{\textsuperscript{2}}{}}}
 \institute
-{Purdue University\texorpdfstring{\textsuperscript{1}}{}, Duepur University\texorpdfstring{\textsuperscript{2}},\\
-Appearing at Overleaf Template}
+{\large{Purdue University\texorpdfstring{\textsuperscript{1}}{}, Duepur University\texorpdfstring{\textsuperscript{2}},\\
+Appearing at Overleaf Template}}
 \date{\today}
 
 \renewcommand{\titlelogo}{
@@ -23,15 +24,13 @@ Appearing at Overleaf Template}
 \begin{document}
 \begin{frame}{}
     \begin{columns}[c]
-    \begin{column}{.45\linewidth}
+    \begin{column}{.48\linewidth}
     \begin{block}{\large Long Text}
         Nobody actually reads a very long paragraph in a poster.
 
         \bigskip
 
-        \lipsum[2]
-
-        \lipsum[2]
+        \lipsum[3]
     \end{block}
 
     \begin{block}{Itemize List}
@@ -72,7 +71,7 @@ Appearing at Overleaf Template}
     
     \end{column}
 
-    \begin{column}{.45\linewidth}
+    \begin{column}{.48\linewidth}
     
     \begin{block}{Figure}
         \LaTeX\ can draw figures with the tikz package:
@@ -98,10 +97,6 @@ Appearing at Overleaf Template}
 
     \begin{exampleblock}{Block with Another Color}
     A gray block with two different colors.
-    
-    \bigskip
-    
-    \lipsum[2]
     \end{exampleblock}
 
     \begin{alertblock}{Alert Block}
@@ -109,7 +104,7 @@ Appearing at Overleaf Template}
 
     \bigskip
     
-    \lipsum[2]
+    \lipsum[7]
     \end{alertblock}
 
     \begin{block}{Thank you for using!}

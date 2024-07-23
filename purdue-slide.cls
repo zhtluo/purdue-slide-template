@@ -43,11 +43,11 @@
 \setbeamertemplate{footline}
 {
     \hspace*{.12\paperwidth}
-    \makebox[.3\paperwidth][c]{\slidelogo}
-    \makebox[.3\paperwidth][c]{\slidefoot}
-    \makebox[.12\paperwidth][c]{\insertdate}
+    \parbox{.3\paperwidth}{\centering \slidelogo}
+    \parbox{.3\paperwidth}{\centering \slidefoot}
+    \parbox{.12\paperwidth}{\centering \insertdate}
     \hspace{.01\paperwidth}
-    \makebox[.02\paperwidth][c]{\insertframenumber}
+    \parbox{.02\paperwidth}{\centering \insertframenumber}
     \vspace*{.06\paperheight}
 }
 
@@ -58,11 +58,14 @@
     \inserttitle\par
     \bigskip
     \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}
-    \hfill\insertsubtitle\par
-    \bigskip
+    {\raggedleft\insertsubtitle\par}
+    \vfill
     \usebeamerfont{author}\usebeamercolor[fg]{author}
     \insertauthor\par
+    \bigskip
+    \usebeamerfont{date}\usebeamercolor[fg]{date}
     \insertinstitute\par
+    \bigskip
     \insertdate\par
 }
 
@@ -82,11 +85,11 @@
         \setbeamercolor{footline}{fg=white}
         \setbeamertemplate{footline}{
             \hspace*{.12\paperwidth}
-            \makebox[.3\paperwidth][c]{\titlelogo}
-            \makebox[.3\paperwidth][c]{\slidefoot}
-            \makebox[.12\paperwidth][c]{\insertdate}
+            \parbox{.3\paperwidth}{\centering \titlelogo}
+            \parbox{.3\paperwidth}{\centering \slidefoot}
+            \parbox{.12\paperwidth}{\centering \insertdate}
             \hspace{.01\paperwidth}
-            \makebox[.02\paperwidth][c]{\insertframenumber}
+            \parbox{.02\paperwidth}{\centering \insertframenumber}
             \vspace*{.06\paperheight}
         }
         \setbeamertemplate{frametitle}{\vspace*{.25\paperheight}

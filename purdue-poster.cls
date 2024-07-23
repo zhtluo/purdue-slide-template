@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{purdue-poster}[A Purdue LaTeX Poster Template]
 
-\LoadClass{beamer}
+\LoadClassWithOptions{beamer}
 
 \RequirePackage{calc}
 \RequirePackage{environ}
@@ -10,6 +10,8 @@
 \usetikzlibrary{positioning}
 
 \RequirePackage{purdue}
+
+\RequirePackage[scale=1.6]{beamerposter}
 
 % Disable navigation symbols 
 \setbeamertemplate{navigation symbols}{}
@@ -23,8 +25,8 @@
     \begin{tikzpicture}[remember picture,overlay,shift=(current page.north west)]
     \begin{scope}[x={(current page.north east)},y={(current page.south west)}]
         \clip (0,0) rectangle (1,1);
-        \fill[purdue-railway-gray] (0,0) rectangle (1,1);
-        \draw[purdue-cool-gray,line width=60pt] (1,0) -- (1,1) -- (0,1) -- (0,0);
+        \fill[purdue-cool-gray] (0,0) rectangle (1,1);
+        \fill[purdue-railway-gray] (0.01,0.01) rectangle (0.99,0.99);
     \end{scope}
     \end{tikzpicture}
 }
@@ -40,7 +42,8 @@
         \raggedleft
         {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}
         \vskip4ex
-        {\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par\insertinstitute\par}
+        {\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par
+        \usebeamerfont{date}\usebeamercolor[fg]{date}\insertinstitute\par}
       \end{column}
       \begin{column}{.05\paperwidth}
       \end{column}
@@ -55,6 +58,6 @@
       \end{column}
     \end{columns}
   \end{beamercolorbox}
-  \begin{beamercolorbox}[colsep=15pt]{headline sep}
+  \begin{beamercolorbox}[colsep=.01\paperwidth]{headline sep}
   \end{beamercolorbox}
 }
