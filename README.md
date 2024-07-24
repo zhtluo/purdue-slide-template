@@ -10,9 +10,9 @@ A LaTeX beamer slide and poster template inspired by [Purdue CS Brand Guide](htt
 
 ## Preview
 
-[Click here for the slide](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.2/slide.pdf).
+[Click here for the slide](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.3/slide.pdf).
 
-[Click here for the poster](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.2/poster.pdf).
+[Click here for the poster](https://github.com/zhtluo/purdue-slide-template/releases/download/v1.3/poster.pdf).
 
 ## SVG
 
