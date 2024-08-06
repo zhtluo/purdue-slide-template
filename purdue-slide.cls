@@ -1,6 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{purdue-slide}[A Purdue LaTeX Slide Template]
 
+\newif\ifsimpleslides
+\DeclareOption{simpleslides}{
+    \simpleslidestrue
+}
+\ProcessOptions\relax
+
 % For 4:3 slides: \LoadClass{beamer}
 \LoadClass[aspectratio=169]{beamer}
 
@@ -40,8 +46,8 @@
 % Customize footnote
 \newcommand{\slidelogo}{}
 \newcommand{\slidefoot}{}
-\setbeamertemplate{footline}
-{
+
+\setbeamertemplate{footline}{
     \hspace*{.12\paperwidth}
     \parbox{.3\paperwidth}{\centering \slidelogo}
     \parbox{.3\paperwidth}{\centering \slidefoot}
@@ -50,6 +56,18 @@
     \parbox{.02\paperwidth}{\centering \insertframenumber}
     \vspace*{.06\paperheight}
 }
+\ifsimpleslides
+    \setbeamertemplate{footline}
+    {
+        \hspace*{.12\paperwidth}
+        \parbox{.58\paperwidth}{\centering \slidefoot}
+        \hspace{.02\paperwidth}
+        \hspace{.02\paperwidth}
+        \parbox{.10\paperwidth}{\centering \insertframenumber}
+        \hfill
+        \vspace*{.06\paperheight}
+    }
+\fi
 
 % Customize title page style
 \defbeamertemplate*{title page}{customized}[1][]
@@ -92,6 +110,18 @@
             \parbox{.02\paperwidth}{\centering \insertframenumber}
             \vspace*{.06\paperheight}
         }
+        \ifsimpleslides
+            \setbeamertemplate{footline}
+            {
+                \hspace*{.12\paperwidth}
+                \parbox{.58\paperwidth}{\centering \slidefoot}
+                \hspace{.02\paperwidth}
+                \hspace{.02\paperwidth}
+                \parbox{.10\paperwidth}{\centering \insertframenumber}
+                \hfill
+                \vspace*{.06\paperheight}
+            }
+        \fi
         \setbeamertemplate{frametitle}{\vspace*{.25\paperheight}
             \fontsize{30}{36}\fontseries{bc}\fontshape{it}\selectfont\insertframetitle}
         \setbeamercolor{normal text}{fg=white}
