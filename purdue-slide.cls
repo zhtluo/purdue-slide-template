@@ -151,3 +151,6 @@
         \end{frame}
     }
 }
+
+% Add text commands
+\DeclareTextFontCommand{\textemph}{\bfseries\color{purdue-aged}}
