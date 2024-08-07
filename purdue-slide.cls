@@ -44,8 +44,8 @@
     \fontsize{18}{20}\fontseries{bc}\fontshape{it}\selectfont\insertframetitle}
 
 % Customize footnote
-\newcommand{\slidelogo}{}
-\newcommand{\slidefoot}{}
+\newcommand{\slidelogo}{~}
+\newcommand{\slidefoot}{~}
 
 \setbeamertemplate{footline}{
     \hspace*{.12\paperwidth}
@@ -78,16 +78,18 @@
     \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}
     {\raggedleft\insertsubtitle\par}
     \vfill
-    \usebeamerfont{author}\usebeamercolor[fg]{author}
-    \insertauthor\par
-    \bigskip
-    \usebeamerfont{date}\usebeamercolor[fg]{date}
-    \insertinstitute\par
-    \bigskip
-    \insertdate\par
+    \begin{center}
+        \usebeamerfont{author}\usebeamercolor[fg]{author}
+        \insertauthor\par
+        \smallskip
+        \usebeamerfont{date}\usebeamercolor[fg]{date}
+        \insertinstitute\par
+        \smallskip
+        \insertdate\par
+    \end{center}
 }
 
-\newcommand{\titlelogo}{}
+\newcommand{\titlelogo}{~}
 \NewEnviron{titleframe}[1]{
     {
         \setbeamertemplate{background canvas}{
@@ -154,3 +156,4 @@
 
 % Add text commands
 \DeclareTextFontCommand{\textemph}{\bfseries\color{purdue-aged}}
+\DeclareTextFontCommand{\textemphdark}{\bfseries\color{purdue-dust}}
