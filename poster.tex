@@ -1,6 +1,7 @@
-\documentclass[20pt]{purdue-poster}
+\documentclass{purdue-poster}
 
 % Paper size
+\usepackage[fontsize=38pt]{fontsize}
 \geometry{papersize={32in, 40in}}
 
 % For filler text:
@@ -8,7 +9,7 @@
 \usepackage{lipsum}
 
 \title{\Huge{A Purdue \LaTeX\ Poster Template}}
-\author{\large{A Purdue Student\texorpdfstring{\textsuperscript{1}}{}, A Duepur Student\texorpdfstring{\textsuperscript{2}}{}}}
+\author{\Large{A Purdue Student\texorpdfstring{\textsuperscript{1}}{}, A Duepur Student\texorpdfstring{\textsuperscript{2}}{}}}
 \institute
 {\large{Purdue University\texorpdfstring{\textsuperscript{1}}{}, Duepur University\texorpdfstring{\textsuperscript{2}},\\
 Appearing at Overleaf Template}}
@@ -16,9 +17,9 @@ Appearing at Overleaf Template}}
 
 \renewcommand{\titlelogo}{
     % You can put multiple logos here.
-    \includesvg[width=.1\paperwidth,keepaspectratio]{logo/cs-v-rev.svg}
-    \vskip20pt
-    \includesvg[width=.1\paperwidth,keepaspectratio]{logo/pu-v-rev.svg}
+    \includesvg[width=.06\paperwidth,keepaspectratio]{logo/cs-v-rev.svg}
+    \vskip50pt
+    \includesvg[width=.06\paperwidth,keepaspectratio]{logo/pu-v-rev.svg}
 }
 
 \begin{document}
@@ -30,7 +31,7 @@ Appearing at Overleaf Template}}
 
         \bigskip
 
-        \lipsum[3]
+        \lipsum[2]
     \end{block}
 
     \begin{block}{Itemize List}
@@ -81,10 +82,10 @@ Appearing at Overleaf Template}}
         square/.style={rectangle, draw=black!, very thick, minimum size=5mm},
         ]
         \node[square](client){\footnotesize Client};
-        \node[square](r1)[right=of client]{\footnotesize Relay 1};
-        \node[square](r2)[right=of r1]{\footnotesize Relay 2};
-        \node[square](r3)[right=of r2]{\footnotesize Relay 3};
-        \node[square](server)[right=of r3]{\footnotesize Server};
+        \node[square](r1)[right=2em of client]{\footnotesize Relay 1};
+        \node[square](r2)[right=2em of r1]{\footnotesize Relay 2};
+        \node[square](r3)[right=2em of r2]{\footnotesize Relay 3};
+        \node[square](server)[right=2em of r3]{\footnotesize Server};
         \draw[->](client.east)--node[above=1em]{\footnotesize$E_1(E_2(E_3(P)))$}(r1.west);
         \draw[->](r1.east)--node[above=1em]{\footnotesize$E_2(E_3(P))$}(r2.west);
         \draw[->](r2.east)--node[above=1em]{\footnotesize$E_3(P)$}(r3.west);

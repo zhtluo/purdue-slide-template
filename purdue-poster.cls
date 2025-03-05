@@ -11,7 +11,7 @@
 
 \RequirePackage{purdue}
 
-\RequirePackage[scale=1.6]{beamerposter}
+\RequirePackage{beamerposter}
 
 % Disable navigation symbols 
 \setbeamertemplate{navigation symbols}{}

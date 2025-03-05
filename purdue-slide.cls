@@ -41,7 +41,7 @@
 \newlength{\titlevspace}
 \setlength{\titlevspace}{\dimexpr.13\paperheight - 20pt\relax}
 \setbeamertemplate{frametitle}{\vspace*{\titlevspace}
-    \fontsize{18}{20}\fontseries{bc}\fontshape{it}\selectfont\insertframetitle}
+    \LARGE\fontseries{bc}\fontshape{it}\selectfont\insertframetitle}
 
 % Customize footnote
 \newcommand{\slidelogo}{~}
@@ -125,7 +125,7 @@
             }
         \fi
         \setbeamertemplate{frametitle}{\vspace*{.25\paperheight}
-            \fontsize{30}{36}\fontseries{bc}\fontshape{it}\selectfont\insertframetitle}
+            \Huge\fontseries{bc}\fontshape{it}\selectfont\insertframetitle}
         \setbeamercolor{normal text}{fg=white}
         \setbeamercolor{item}{fg=white}
         \begin{frame}{#1}
