@@ -69,6 +69,18 @@
     \noindent\usebox{\headlinebox}%
 }
 
+\setbeamertemplate{background canvas}{%
+    \begin{tikzpicture}[remember picture, overlay]
+    \begin{scope}[
+        shift={(current page.south west)},
+        x={(1\paperwidth, 0)},
+        y={(0, 1ex)}
+    ]
+    \fill[black] (0,0) rectangle (1,1);
+    \end{scope}
+    \end{tikzpicture}%
+}
+
 \newenvironment<>{abstractblock}[1]{%
 \setbeamercolor{block title}{fg=purdue-gold,bg=black}%
 \setbeamercolor{block body}{bg=purdue-steam}%
