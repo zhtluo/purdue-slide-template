@@ -3,9 +3,12 @@
 \RequirePackage[OT1]{fontenc}
 \usepackage{unicode-math}
 \setromanfont{TeX Gyre Termes}
-\setsansfont{TeX Gyre Heros}[FontFace = {bc}{it}{TeX Gyre Heros Cn/BI}]
-\setmonofont{TeX Gyre Cursor}[Ligatures=NoCommon]
+\setsansfont{TeX Gyre Heros}[FontFace = {bc}{it}{TeX Gyre Heros Cn/BI}, FontFace = {c}{it}{TeX Gyre Heros Cn/I}]
+% \setmonofont{TeX Gyre Cursor}[Ligatures=NoCommon]
+\setmonofont{Fira Code}
+\usepackage[verbatim]{lstfiracode}
 \setmathfont{TeX Gyre Termes Math}
+\setmathfont{TeX Gyre Termes Math}[version = bold, FakeBold = 2.0]
 
 % Color
 \definecolor{purdue-gold}{RGB}{207, 185, 145}
@@ -38,16 +41,17 @@
 \setbeamercolor{block title example}{bg=purdue-steel, fg=white}
 \setbeamercolor{block body alerted}{bg=alerted text.fg!10}
 \setbeamercolor{block title alerted}{bg=alerted text.fg!20}
+\setbeamerfont{block title}{size={\LARGE}, series=\fontseries{bc}, shape=\fontshape{it}}%
 
 % Customize figure tyle:
-\setbeamercolor{caption name}{fg=purdue-steel}
+\setbeamercolor{caption name}{fg=purdue-aged}
 
 % Customize title page style
-\setbeamercolor*{title}{fg=purdue-gold}
+\setbeamercolor*{title}{fg=white}
 \setbeamerfont*{title}{size={\Huge}, series=\fontseries{bc}, shape=\fontshape{it}}
-\setbeamercolor*{subtitle}{fg=white}
-\setbeamerfont*{subtitle}{size={\small}, series=\fontseries{bm}, shape=\fontshape{it}}
-\setbeamercolor*{author}{fg=white}
-\setbeamerfont*{author}{size={\small}, series=\fontseries{bm}, shape=\fontshape{n}}
-\setbeamercolor*{date}{fg=purdue-railway-gray}
-\setbeamerfont*{date}{size={\small}, series=\fontseries{bm}, shape=\fontshape{n}}
+\setbeamercolor*{subtitle}{fg=purdue-gold}
+\setbeamerfont*{subtitle}{size={\small}, series=\fontseries{m}, shape=\fontshape{it}}
+\setbeamercolor*{author}{fg=purdue-gold}
+\setbeamerfont*{author}{size={\small}, series=\fontseries{m}, shape=\fontshape{n}}
+\setbeamercolor*{date}{fg=purdue-steam}
+\setbeamerfont*{date}{size={\small}, series=\fontseries{m}, shape=\fontshape{n}}

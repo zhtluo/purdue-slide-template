@@ -1,13 +1,15 @@
 \documentclass{purdue-poster}
 
+% Optionally change the font size to fit more/less text on the poster.
+\usepackage[fontsize=40pt]{fontsize}
 % Paper size
-\usepackage[fontsize=38pt]{fontsize}
-\geometry{papersize={32in, 40in}}
+\geometry{papersize={40in, 32in}}
 
 % For filler text:
 \usepackage[base]{babel}
 \usepackage{lipsum}
 
+% Optionally change the title size to fit the length
 \title{\Huge{A Purdue \LaTeX\ Poster Template}}
 \author{\Large{A Purdue Student\texorpdfstring{\textsuperscript{1}}{}, A Duepur Student\texorpdfstring{\textsuperscript{2}}{}}}
 \institute
@@ -17,114 +19,142 @@ Appearing at Overleaf Template}}
 
 \renewcommand{\titlelogo}{
     % You can put multiple logos here.
-    \includesvg[width=.06\paperwidth,keepaspectratio]{logo/cs-v-rev.svg}
-    \vskip50pt
-    \includesvg[width=.06\paperwidth,keepaspectratio]{logo/pu-v-rev.svg}
+    \includesvg[width=.06\paperwidth,keepaspectratio]{logo/cs-v-rev.svg}\par 
+    \vspace{4ex}
+    \includesvg[width=.06\paperwidth,keepaspectratio]{logo/pu-v-rev.svg}\par
 }
+
+% Optionally set some colsep
+\newlength{\postercolsep}
+\setlength{\postercolsep}{1em}
+\newcommand{\postercolwidth}[1]{\dimeval{#1-\postercolsep}}
 
 \begin{document}
 \begin{frame}{}
-    \begin{columns}[c]
-    \begin{column}{.48\linewidth}
-    \begin{block}{\large Long Text}
-        Nobody actually reads a very long paragraph in a poster.
+\begin{columns}[onlytextwidth, t]
+    % Feel free to twist the line widths for different layout.
+    \begin{column}{\postercolwidth{.6\linewidth}}
 
-        \bigskip
+        \begin{abstractblock}{Overview}
+            Nobody actually reads a very long paragraph in a poster.
 
-        \lipsum[2]
-    \end{block}
+            \bigskip
 
-    \begin{block}{Itemize List}
-        Some introduction of the list.
-        \begin{itemize}
-            \item Bulleted copy. Keep it short with bite-size chunks of information.
-            \begin{itemize}
-                \item Bulleted copy. Keep it short with bite-size chunks of information.
-            \end{itemize}
-            \item Bulleted copy. Keep it short with bite-size chunks of information.
-            \item Bulleted copy. Keep it short with bite-size chunks of information.
-        \end{itemize}
-    \end{block}
+            \lipsum[2]
+        \end{abstractblock}
 
-    \begin{block}{Enumerate List}
-        Some introduction of the list.
-        \begin{enumerate}
-            \item Bulleted copy. Keep it short with bite-size chunks of information.
-            \begin{enumerate}
-                \item Bulleted copy. Keep it short with bite-size chunks of information.
-            \end{enumerate}
-            \item Bulleted copy. Keep it short with bite-size chunks of information.
-            \item Bulleted copy. Keep it short with bite-size chunks of information.
-        \end{enumerate}
-    \end{block}
-
-    \begin{block}{Maths}
-        An example of some very long equations with $\Psi (x,t)$:
+        \begin{columns}[onlytextwidth, t]
         
-        \begin{align}
-        i\hbar {\frac {\partial }{\partial t}}\Psi (x,t)&=\left[-{\frac {\hbar ^{2}}{2m}}{\frac {\partial ^{2}}{\partial x^{2}}}+V(x,t)\right]\Psi (x,t) \\
-        i\hbar {\frac {d}{dt}}\vert \Psi (t)\rangle &={\hat {H}}\vert \Psi (t)\rangle \\ 
-        |\Psi (t)\rangle &=\sum _{n}A_{n}e^{{-iE_{n}t}/\hbar }|\psi _{E_{n}}\rangle
-        \end{align}
-        
-        Indeed an example of some very long equations with $\Psi (x,t)$.
-    \end{block}
+            \begin{column}{\postercolwidth{.5\linewidth}}
+                
+                \begin{plainblock}{Itemize List}
+                    Some introduction of the list.
+                    \begin{itemize}
+                        \item Bulleted copy. Keep it short with bite-size chunks of information.
+                        \begin{itemize}
+                            \item Bulleted copy. Keep it short with bite-size chunks of information.
+                        \end{itemize}
+                        \item Bulleted copy. Keep it short with bite-size chunks of information.
+                        \item Bulleted copy. Keep it short with bite-size chunks of information.
+                    \end{itemize}
+                \end{plainblock}
+            
+                \begin{plainblock}{Enumerate List}
+                    Some introduction of the list.
+                    \begin{enumerate}
+                        \item Bulleted copy.
+                        \begin{enumerate}
+                            \item Bulleted copy.
+                        \end{enumerate}
+                        \item Bulleted copy.
+                    \end{enumerate}
+                \end{plainblock}
+
+            \end{column}
+
+            \begin{column}{\postercolwidth{.5\linewidth}}
+                
+                \begin{plainblock}{Maths. It's fine if the heading takes two lines}
+                    An example of some very long equations with $\Psi (x,t)$:
+                    
+                    \begin{align}
+                    i\hbar {\frac {\partial }{\partial t}}\Psi (x,t)&=\left[-{\frac {\hbar ^{2}}{2m}}{\frac {\partial ^{2}}{\partial x^{2}}}+V(x,t)\right]\Psi (x,t) \\
+                    i\hbar {\frac {d}{dt}}\vert \Psi (t)\rangle &={\hat {H}}\vert \Psi (t)\rangle \\ 
+                    |\Psi (t)\rangle &=\sum _{n}A_{n}e^{{-iE_{n}t}/\hbar }|\psi _{E_{n}}\rangle
+                    \end{align}
+                    
+                    Indeed an example of some very long equations with $\Psi (x,t)$.
+                \end{plainblock}
+
+                \vspace{1em}
+
+                \begin{block}{Do You Know}
+                    This is a gold block with two different colors.
+                    
+                    Good use of colors makes the poster less monotone.
+                \end{block}
+
+            \end{column}
+            
+        \end{columns}
     
     \end{column}
 
-    \begin{column}{.48\linewidth}
-    
-    \begin{block}{Figure}
-        \LaTeX\ can draw figures with the tikz package:
-        \begin{figure}[h]
-        \centering
-        \begin{tikzpicture}[
-        square/.style={rectangle, draw=black!, very thick, minimum size=5mm},
-        ]
-        \node[square](client){\footnotesize Client};
-        \node[square](r1)[right=2em of client]{\footnotesize Relay 1};
-        \node[square](r2)[right=2em of r1]{\footnotesize Relay 2};
-        \node[square](r3)[right=2em of r2]{\footnotesize Relay 3};
-        \node[square](server)[right=2em of r3]{\footnotesize Server};
-        \draw[->](client.east)--node[above=1em]{\footnotesize$E_1(E_2(E_3(P)))$}(r1.west);
-        \draw[->](r1.east)--node[above=1em]{\footnotesize$E_2(E_3(P))$}(r2.west);
-        \draw[->](r2.east)--node[above=1em]{\footnotesize$E_3(P)$}(r3.west);
-        \draw[->](r3.east)--node[above=1em]{\footnotesize$P$}(server);
-        \end{tikzpicture}
-        \caption{An Example of a Three-Hop Connection}
-        \label{fig:three-hop}
-        \end{figure}
-    \end{block}
+    \begin{column}{\postercolwidth{.4\linewidth}}
+        
+        \begin{plainblock}{Figure}
+            \LaTeX\ can draw figures with the tikz package:
 
-    \begin{exampleblock}{Block with Another Color}
-    A gray block with two different colors.
-    \end{exampleblock}
+            {
+                \centering
+                \small
+                \begin{figure}[h]
+                    \centering
+                    \begin{tikzpicture}[
+                    square/.style={rectangle, draw=black!, very thick, minimum size=5mm},
+                    ]
+                    \node[square](client){\footnotesize Client};
+                    \node[square](r1)[right=2em of client]{\footnotesize Relay 1};
+                    \node[square](r2)[right=2em of r1]{\footnotesize Relay 2};
+                    \node[square](r3)[right=2em of r2]{\footnotesize Relay 3};
+                    \node[square](server)[right=2em of r3]{\footnotesize Server};
+                    \draw[->](client.east)--node[above=1em]{\footnotesize$E_1(E_2(E_3(P)))$}(r1.west);
+                    \draw[->](r1.east)--node[above=1em]{\footnotesize$E_2(E_3(P))$}(r2.west);
+                    \draw[->](r2.east)--node[above=1em]{\footnotesize$E_3(P)$}(r3.west);
+                    \draw[->](r3.east)--node[above=1em]{\footnotesize$P$}(server);
+                    \end{tikzpicture}
+                    \caption{An Example of a Three-Hop Connection}
+                    \label{fig:three-hop}
+                \end{figure}
+            }
 
-    \begin{alertblock}{Alert Block}
-    A red block for alert, in default theme from \LaTeX.
+        \end{plainblock}
 
-    \bigskip
-    
-    \lipsum[7]
-    \end{alertblock}
+        \begin{exampleblock}{Block with Another Color}
+        A gray block with two different colors.
+        \end{exampleblock}
 
-    \begin{block}{Thank you for using!}
+        \begin{alertblock}{Alert Block}
+        A red block for alert, in default theme from \LaTeX.
+        \end{alertblock}
+
+    \begin{plainblock}{Thank you for using!}
         For issues on the template, please visit the Github page:
         
         {\small\texttt{https://github.com/zhtluo/purdue-slide-template}\par}
-    \end{block}
+    \end{plainblock}
 
-    \begin{block}{\large QR Code}
+    \begin{plainblock}{QR Code}
         Put a QR code here to give the reader something to scan.
 
         You can find the SVG QR generator under \texttt{qr.py}.
 
         \begin{figure}
-            {\centering\includesvg[width=.5\linewidth]{qrcode.svg}}
+            {\centering\includesvg[width=8em]{qrcode.svg}}
         \end{figure}
-    \end{block}
+    \end{plainblock}
     \end{column}
-    \end{columns}
-    \vfill
+    
+\end{columns}
 \end{frame}
 \end{document}

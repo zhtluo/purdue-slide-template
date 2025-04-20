@@ -37,7 +37,7 @@
 \setbeamersize{text margin left=.18\paperwidth,text margin right=.12\paperwidth} 
 
 % Customize title
-\setbeamercolor{frametitle}{fg=purdue-gold}
+\setbeamercolor{frametitle}{fg=white}
 \newlength{\titlevspace}
 \setlength{\titlevspace}{\dimexpr.13\paperheight - 20pt\relax}
 \setbeamertemplate{frametitle}{\vspace*{\titlevspace}
@@ -78,7 +78,7 @@
     \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}
     {\raggedleft\insertsubtitle\par}
     \vfill
-    \begin{center}
+    \begin{flushright}
         \usebeamerfont{author}\usebeamercolor[fg]{author}
         \insertauthor\par
         \smallskip
@@ -86,7 +86,7 @@
         \insertinstitute\par
         \smallskip
         \insertdate\par
-    \end{center}
+    \end{flushright}
 }
 
 \newcommand{\titlelogo}{~}
@@ -126,8 +126,8 @@
         \fi
         \setbeamertemplate{frametitle}{\vspace*{.25\paperheight}
             \Huge\fontseries{bc}\fontshape{it}\selectfont\insertframetitle}
-        \setbeamercolor{normal text}{fg=white}
-        \setbeamercolor{item}{fg=white}
+        \setbeamercolor{normal text}{fg=purdue-steam}
+        \setbeamercolor{item}{fg=purdue-steam}
         \begin{frame}{#1}
             \usebeamercolor[fg]{normal text}
             \BODY
